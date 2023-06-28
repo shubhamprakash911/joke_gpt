@@ -17,10 +17,7 @@ app.get('/joke', async (req, res) => {
   try {
     const keyword = req.query.keyword;
     const response = await axios.post('https://api.openai.com/v1/engines/davinci/completions', {
-      prompt: `joke about ${keyword}`,
-      max_tokens: 100,
-      temperature: 0.7,
-      n: 1
+      prompt: `make a funny joke on ${keyword}`,
     }, {
       headers: {
         'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
