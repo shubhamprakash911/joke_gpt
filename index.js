@@ -16,7 +16,7 @@ app.get("/",(req,res)=>{
 
 // Set up OpenAI configuration
 const openaiConfig = new Configuration({
-  apiKey: process.env.OPEN_AI_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(openaiConfig);
 const history = []
